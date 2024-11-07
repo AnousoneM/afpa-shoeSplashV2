@@ -7,7 +7,12 @@ body {
 }
 
 section {
-    margin: 2.5rem 0;
+    margin-top: 2.5rem;
+}
+
+h3,
+h3+small {
+    font-family: "Courgette";
 }
 
 /* ############################ */
@@ -20,26 +25,12 @@ header {
 
 .container {
     width: 75%;
+    padding: 1rem 1rem 0 1rem;
     margin: 0 auto;
-    border: 1px solid blue;
 }
 
 /* ############################ */
-/* ### NAV ### */
-
-.container nav {
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.3rem;
-    padding: 1.5rem;
-}
-
-.container nav a {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-}
+/* ### TOPBAR ### */
 
 .topbar {
     background-color: black;
@@ -48,8 +39,32 @@ header {
     padding: 0.5rem 0;
 }
 
+/* ############################ */
+/* ### NAV ### */
+
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+}
+
+.container nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    width: 20%;
+    text-align: center;
+}
+
+.container nav a:hover {
+    color: white;
+    background-color: rgb(53, 50, 50);
+    transition: all 0.1s ease 0s;
+}
+
 #cart {
-    border: 1px solid blue;
     /* afin de caler la carte en haut à droite */
     float: right;
     display: flex;
@@ -79,6 +94,10 @@ header {
 /* ############################ */
 /* ### SECTION SLIDER ### */
 
+#slider {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 #slider h2 {
     /* position absolute pour être au même niveau que l'image */
     position: absolute;
@@ -88,7 +107,7 @@ header {
 }
 
 #slider span {
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 #slider img {
@@ -104,8 +123,11 @@ header {
 /* ### SECTION SELECT ### */
 
 #select {
+    box-sizing: border-box;
     background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -114,10 +136,70 @@ header {
 
 #select h1 {
     width: 100%;
+    padding-bottom: 1rem;
 }
 
 .escarpin {
     text-align: center;
+}
+
+/* mise en place du hover sur la classe escarpin*/
+#select:has(.escarpin:hover) .escarpin:not(:hover) {
+    filter: opacity(50%);
+    transition: all 0.6s ease;
+}
+
+.escarpin:hover {
+    filter: opacity(100%);
+    transition: all 0.6s ease;
+}
+
+
+/* ############################ */
+/* ### SECTION NEWS ### */
+
+#news {
+    display: flex;
+    justify-content: space-between;
+}
+
+#news article {
+    width: 33%;
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: white;
+    border: 2px rgb(231, 231, 231) solid;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#news article h2 {
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    padding: 0.8rem 0;
+}
+
+#news article h2 img {
+    width: 1.3rem;
+    padding: 0 0.5rem;
+}
+
+#news img {
+    width: 100%;
+}
+
+/* Maintenant nous effectuons un css à pour les 3 catégories */
+#new h2 {
+    background-color: #ca3bbc;
+}
+
+#best h2 {
+    background-color: #94b844;
+}
+
+#crush h2 {
+    background-color: #4b8ca8;
 }
 
 
@@ -131,6 +213,8 @@ header {
     background-color: #d4a8dd;
     display: flex;
     justify-content: space-evenly;
+    font-size: 1.4rem;
+    padding: 1rem;
 }
 
 #info article {
@@ -144,6 +228,7 @@ header {
 /* ############################ */
 /* ### SECTION BOTTOMBAR ### */
 #bottombar {
+    margin-top: 0;
     background-color: #f6d4f5;
     display: flex;
     flex-wrap: wrap;
