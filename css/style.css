@@ -44,12 +44,14 @@ header {
 
 .container nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     font-size: 1.3rem;
     padding: 0.5rem;
 }
 
 .container nav a {
+    box-sizing: border-box;
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -165,7 +167,7 @@ header {
 
 #news article {
     width: 33%;
-    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     background-color: white;
     border: 2px rgb(231, 231, 231) solid;
@@ -242,4 +244,75 @@ header {
 #bottombar article ul {
     padding-left: 0;
     list-style: none;
+}
+
+/* Mise en place d'une média querie pour le coté responsibe à 640px */
+@media (max-width: 640px) {
+
+    .container {
+        width: 90%;
+        padding: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    /* ############################ */
+    /* ### NAV ### */
+
+    .container nav {
+        flex-direction: column;
+    }
+
+    .container nav a {
+        width: 100%;
+    }
+
+    #cart {
+        display: none;
+    }
+
+    /* ############################ */
+    /* ### SECTION SLIDER ### */
+    #slider h2 {
+        box-sizing: border-box;
+        margin-top: 1rem;
+        width: 84.5%;
+        padding: 1rem;
+        font-size: 0.5em;
+    }
+
+    /* ############################ */
+    /* ### SECTION SELECT ### */
+
+    #select {
+        text-align: center;
+    }
+
+    .escarpin {
+        width: 100%;
+    }
+
+    /* ############################ */
+    /* ### SECTION NEWS ### */
+
+    #news {
+        flex-direction: column;
+    }
+
+    #news article {
+        width: 100%;
+    }
+
+    /* ############################ */
+    /* ### SECTION BOTTOMBAR ### */
+
+    #info, #bottombar {
+        flex-direction: column;
+    }
+    #info article {
+        margin-top: 1rem;
+    }
+
 }
