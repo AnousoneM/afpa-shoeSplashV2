@@ -1,1 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/* Import de la police courgette et mona*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+    font-family: "Mona Sans", sans-serif;
+    background-color: #f1f1f1;
+}
+
+section {
+    margin: 1rem 0;
+}
+
+/* ############################ */
+/* ######## HEADER ############ */
+/* ############################ */
+
+header {
+    background-color: #f6d4f5;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid blue;
+}
+
+.container nav {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.topbar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+#cart {
+    border: 1px solid blue;
+    /* afin de caler la carte en haut à droite */
+    float: right;
+    display: flex;
+    padding: 0.5rem;
+}
+
+#cart p {
+    margin: 0;
+    text-align: right;
+}
+
+#cart span {
+    font-weight: bold;
+    display: block;
+}
+
+#cart i {
+    font-size: 2.5rem;
+    color: #d4a8dd;
+    padding-left: 0.5rem;
+}
+
+/* ############################ */
+/* ######## MAIN ############## */
+/* ############################ */
+
+/* ############################ */
+/* ### SECTION SLIDER ### */
+
+#slider h2 {
+    /* position absolute pour être au même niveau que l'image */
+    position: absolute;
+    background-color: rgba(212, 168, 221, 0.8);
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+#slider span {
+    font-weight: lighter;
+}
+
+#slider img {
+    width: 100%;
+    /* pour être à la limite avec la div parent */
+    box-sizing: border-box;
+    background-color: white;
+    padding: 1.2rem;
+}
+
+
+/* ############################ */
+/* ### SECTION SELECT ### */
+
+
+/* ############################ */
+/* ######## FOOTER ############ */
+/* ############################ */
+
+/* ############################ */
+/* ### SECTION INFO ### */
+#info {
+    background-color: #d4a8dd;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#info article {
+    text-align: center;
+}
+
+#info i {
+    display: block;
+}
+
+/* ############################ */
+/* ### SECTION BOTTOMBAR ### */
+#bottombar {
+    background-color: #f6d4f5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#bottombar article {
+    text-align: center;
+}
+
+#bottombar article ul {
+    padding-left: 0;
+    list-style: none;
+}
